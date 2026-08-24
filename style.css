@@ -1,52 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #0f172a;
   color: #e5e7eb;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
+
+/* =========================
+   HEADER
+========================= */
 
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
   background: #020617;
+  border-bottom: 1px solid #1e293b;
 }
 
-h1 {
-  font-size: 2.5rem;
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
+
+header p {
+  max-width: 700px;
+  margin: 10px auto;
+  color: #cbd5e1;
+}
+
+header p:first-of-type {
+  font-size: 1.3rem;
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 25px;
+  padding: 12px 24px;
   background: #2563eb;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
 }
 
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  max-width: 950px;
   margin: auto;
+  padding: 70px 20px;
 }
 
 h2 {
-  border-bottom: 2px solid #2563eb;
   display: inline-block;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 5px;
 }
 
-.project {
-  margin-top: 20px;
-  padding: 15px;
-  background: #020617;
-  border-radius: 5px;
+h3 {
+  color: #60a5fa;
 }
+
+h4 {
+  color: #cbd5e1;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+  color: #cbd5e1;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project {
+  margin-top: 25px;
+  padding: 25px;
+
+  background: #020617;
+
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  border-color: #2563eb;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   QA APPROACH
+========================= */
+
+.qa-flow {
+  margin: 25px auto;
+  padding: 20px;
+
+  max-width: 600px;
+
+  text-align: center;
+
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+}
+
+.qa-flow p {
+  margin: 8px;
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+.qa-flow span {
+  color: #64748b;
+}
+
+/* =========================
+   CURRENT LEARNING
+========================= */
+
+#current-learning {
+  background: #020617;
+  border-radius: 10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
+
   background: #020617;
-  margin-top: 40px;
+
+  border-top: 1px solid #1e293b;
+}
+
+footer p {
+  margin: 5px;
+  color: #94a3b8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  header {
+    padding: 70px 20px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p:first-of-type {
+    font-size: 1.1rem;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+
+  .project {
+    padding: 20px;
+  }
 }
